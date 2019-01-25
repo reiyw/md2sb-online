@@ -12,7 +12,7 @@
 function precompileList(input){
   var list = input.split("\n")
   var convertedList = list.map(line => {
-    var pattern = /^( *)[-*+] /
+    var pattern = /^( *)([-*+]|\d+.) /
     var matched = pattern.exec(line)
     if(matched){
       return " " + line.replace(pattern, matched[1])
